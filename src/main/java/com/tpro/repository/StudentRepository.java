@@ -29,7 +29,7 @@ public interface StudentRepository extends JpaRepository<Student, Long> {
 	@Query(value="SELECT * from Student s WHERE s.grade=:pGrade", nativeQuery=true)
 	List<Student> findAllEqualsGradeWithSQL(@Param("pGrade")Integer grade);
 
-	// JPQL
+	// JPQL   
 	@Query("SELECT new com.tpro.dto.StudentDTO(s) FROM Student s WHERE s.id=:id" ) 
 	Optional<StudentDTO> findStudentDTOById(@Param("id") Long id);
 
