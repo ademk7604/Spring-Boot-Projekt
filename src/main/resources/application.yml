@@ -18,9 +18,15 @@ spring:
    hibernate:
       ddl-auto: update
    show-sql: true
+   # open-in-view deger defaultta true geliyor. iliski lazy yapilsa dahi view render deilene kadar veya json olusana kadar transaction acik kaliyor.
+   ##open-in-view: false
+   #properties:
+   #hibernate:
+      #enable_lazy_load_no_trans: true # unutulmus eager olarak kalmsasi gereken ama uygulamamizda layz i cekilmis olarak gozuken iliskiler JSON olusurken direk eager gibi davranacak
    database-platform: org.hibernate.dialect.MySQL8Dialect
    properties:
-      '[hibernate.format_sql]': true
+     format-sql: true
+     '[hibernate.format_sql]': true
       #  uygulamamamiz calisiyorsa loglamaya gerek yok. hata aninda hatanin erde oldugunu bulabilmek ve yakalamak icin kullaniriz
       # loglama yaptik, : dan sonra mutlaka bosluk. alta gecip her tab onun child ini olusturur.
 logging: 
