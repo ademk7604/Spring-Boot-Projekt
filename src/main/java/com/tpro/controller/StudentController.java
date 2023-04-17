@@ -44,7 +44,7 @@ public class StudentController {
 	/*
 	@GetMapping("/welcome") // localhost:8080/students/welcome
 	public String welcome() {
-		return "Welcome to Student Controller";
+		return "Welcome to Student Controller"; // yorum
 	}
 	*/
 	// get All Students
